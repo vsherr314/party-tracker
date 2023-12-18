@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundraising Platform</title>
+    <style>
+        #thermometer {
+            width: 200px;
+            height: 400px;
+            background-color: #f0f0f0;
+            position: relative;
+            margin: 50px auto;
+            border-radius: 0 0 60px 60px;
+        }
+
+        #fill {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            transition: height 0.5s ease;
+            border-radius: 0 0 60px 60px;
+            background: linear-gradient(to top, #3498db 50%, transparent 50%);
+        }
+
+        .level {
+            position: absolute;
+            width: 100%;
+            left: 100%;
+            margin-left: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="thermometer">
+        <!-- adjust based on levels and amounts needed-->
+        <div id="fill"></div>
+        <div class="level" style="bottom: 25%;">Level 1: $500</div>
+        <div class="level" style="bottom: 50%;">Level 2: $1,000</div>
+        <div class="level" style="bottom: 75%;">Level 3: $2,000</div>
+        <div class="level" style="bottom: 100%;">Level 4: $5,000</div>
+    </div>
+
+    <script>
+        // adjust based on actual current fundraising amount
+        const fundraisingAmount = 4000;
+
+        // adjust based on levels and amounts needed
+        const levels = [
+            { amount: 500, label: 'Level 1' },
+            { amount: 1000, label: 'Level 2' },
+            { amount: 2000, label: 'Level 3' },
+            { amount: 5000, label: 'Level 4' },
+        ];
+
+        const fill = document.getElementById('fill');
+
+        levels.forEach((level, index) => {
+            const percentage = (fundraisingAmount / level.amount) * 100;
+            if (percentage >= 100) {
+                document.querySelectorAll('.level')[index].textContent = `${level.label}: Achieved`;
+            }
+        });
+
+        fill.style.height = `${Math.min((fundraisingAmount / levels[levels.length - 1].amount) * 100, 100)}%`;
+    </script>
+
+</body>
+
+</html>
