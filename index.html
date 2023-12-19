@@ -4,15 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundraising Platform</title>
+    <title>21st Birthday Fundraiser</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Dark gray background */
+            color: #fff;
+            font-family: 'Arial Black', sans-serif;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ff00cc; /* Neon orange header */
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        #description {
+            max-width: 600px;
+            margin: 50px auto 100px;
+            color: #ccc;
+        }
+
         #thermometer {
             width: 200px;
             height: 400px;
-            background-color: #f0f0f0;
+            background-color: #1a1a1a; /* Dark background for thermometer */
             position: relative;
-            margin: 50px auto;
-            border-radius: 0 0 60px 60px;
+            margin: 0 auto;
         }
 
         #fill {
@@ -21,8 +46,8 @@
             bottom: 0;
             height: 100%;
             transition: height 0.5s ease;
-            border-radius: 0 0 60px 60px;
-            background: purple;
+            background: linear-gradient(0deg, #ff00cc 0%, #00ccff 100%); /* Neon pink to neon blue gradient */
+            overflow: hidden;
         }
 
         .level {
@@ -31,12 +56,19 @@
             left: 100%;
             margin-left: 10px;
             font-size: 14px;
-            color: #333;
+            color: #fff;
         }
     </style>
 </head>
 
 <body>
+    <header>
+        <h1>Help Us Celebrate Lil Mac's 21st Birthday!</h1>
+    </header>
+
+    <div id="description">
+        <p>Help us make Lil Mac's 21st birthday unforgettable! We're raising funds to throw an awesome party filled with laughter, joy, and neon lights. Your contribution brings us one step closer to creating memories that will last a lifetime. Join us in making Lil Mac's celebration truly special!</p>
+    </div>
 
     <div id="thermometer">
         <!-- adjust based on levels and amounts needed-->
@@ -49,7 +81,7 @@
 
     <script>
         // adjust based on actual current fundraising amount
-        const fundraisingAmount = 2500;
+        const fundraisingAmount = 300;
 
         // adjust based on levels and amounts needed
         const levels = [
@@ -70,7 +102,6 @@
 
         fill.style.height = `${Math.min((fundraisingAmount / levels[levels.length - 1].amount) * 100, 100)}%`;
     </script>
-
 </body>
 
 </html>
