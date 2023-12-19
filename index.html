@@ -19,9 +19,10 @@
             width: 100%;
             position: absolute;
             bottom: 0;
+            height: 100%;
             transition: height 0.5s ease;
             border-radius: 0 0 60px 60px;
-            background: linear-gradient(to top, #3498db 50%, transparent 50%);
+            background: purple;
         }
 
         .level {
@@ -40,22 +41,22 @@
     <div id="thermometer">
         <!-- adjust based on levels and amounts needed-->
         <div id="fill"></div>
-        <div class="level" style="bottom: 25%;">Level 1: $500</div>
-        <div class="level" style="bottom: 50%;">Level 2: $1,000</div>
-        <div class="level" style="bottom: 75%;">Level 3: $2,000</div>
-        <div class="level" style="bottom: 100%;">Level 4: $5,000</div>
+        <div class="level" style="bottom: 25%;">Level 1: $1,000</div>
+        <div class="level" style="bottom: 50%;">Level 2: $2,000</div>
+        <div class="level" style="bottom: 75%;">Level 3: $3,000</div>
+        <div class="level" style="bottom: 100%;">Level 4: $4,000</div>
     </div>
 
     <script>
         // adjust based on actual current fundraising amount
-        const fundraisingAmount = 4000;
+        const fundraisingAmount = 2500;
 
         // adjust based on levels and amounts needed
         const levels = [
-            { amount: 500, label: 'Level 1' },
-            { amount: 1000, label: 'Level 2' },
-            { amount: 2000, label: 'Level 3' },
-            { amount: 5000, label: 'Level 4' },
+            { amount: 1000, label: 'Level 1' },
+            { amount: 2000, label: 'Level 2' },
+            { amount: 3000, label: 'Level 3' },
+            { amount: 4000, label: 'Level 4' },
         ];
 
         const fill = document.getElementById('fill');
