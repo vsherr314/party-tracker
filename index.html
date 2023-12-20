@@ -4,66 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
     <title>21st Birthday Fundraiser</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #333; /* Dark gray background */
-            color: #fff;
-            font-family: 'Arial Black', sans-serif;
-            text-align: center;
-        }
-
-        header {
-            background-color: #ff00cc; /* Neon orange header */
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-
-        #description {
-            max-width: 600px;
-            margin: 50px auto 100px;
-            color: #ccc;
-        }
-
-        #thermometer {
-            width: 200px;
-            height: 400px;
-            background-color: #1a1a1a; /* Dark background for thermometer */
-            position: relative;
-            margin: 0 auto;
-        }
-
-        #fill {
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-            height: 100%;
-            transition: height 0.5s ease;
-            background: linear-gradient(0deg, #ff00cc 0%, #00ccff 100%); /* Neon pink to neon blue gradient */
-            overflow: hidden;
-        }
-
-        .level {
-            position: absolute;
-            width: 100%;
-            left: 100%;
-            margin-left: 10px;
-            font-size: 14px;
-            color: #fff;
-        }
-    </style>
 </head>
 
 <body>
     <header>
-        <h1>Help Us Celebrate Lil Mac's 21st Birthday!</h1>
+        <h1 style="text-align: center;">Help Us Celebrate Lil Mac's 21st Birthday!</h1>
     </header>
 
     <div id="description">
@@ -73,22 +20,22 @@
     <div id="thermometer">
         <!-- adjust based on levels and amounts needed-->
         <div id="fill"></div>
-        <div class="level" style="bottom: 25%;">Level 1: $1,000</div>
-        <div class="level" style="bottom: 50%;">Level 2: $2,000</div>
-        <div class="level" style="bottom: 75%;">Level 3: $3,000</div>
-        <div class="level" style="bottom: 100%;">Level 4: $4,000</div>
+        <div class="level" style="bottom: 25%;">Level 1: $50</div>
+        <div class="level" style="bottom: 50%;">Level 2: $100</div>
+        <div class="level" style="bottom: 75%;">Level 3: $150</div>
+        <div class="level" style="bottom: 100%;">Level 4: $200</div>
     </div>
 
     <script>
         // adjust based on actual current fundraising amount
-        const fundraisingAmount = 300;
+        const fundraisingAmount = 25;
 
         // adjust based on levels and amounts needed
         const levels = [
-            { amount: 1000, label: 'Level 1' },
-            { amount: 2000, label: 'Level 2' },
-            { amount: 3000, label: 'Level 3' },
-            { amount: 4000, label: 'Level 4' },
+            { amount: 500, label: 'Level 1' },
+            { amount: 100, label: 'Level 2' },
+            { amount: 150, label: 'Level 3' },
+            { amount: 200, label: 'Level 4' },
         ];
 
         const fill = document.getElementById('fill');

@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+    font-family: 'Arial Black', sans-serif;
+    text-align: left;
+}
+
+header {
+    background-color: #ff00cc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+#description {
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto 100px;
+    color: #ccc;
+}
+
+#thermometer {
+    width: 200px;
+    height: 400px;
+    background-color: #1a1a1a;
+    position: relative;
+    margin: 0 auto;
+}
+
+#fill {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    transition: height 0.5s ease;
+    background: linear-gradient(0deg, #ff00cc 0%, #00ccff 100%);
+    overflow: hidden;
+}
+
+.level {
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~responsive media queries~~~~~~~~~~~~~~~~~~~*/
+@media only screen and (max-width: 600px) {
+    #description {
+        max-width: 80%;
+    }
+
+    #thermometer {
+        width: 30%;
+        max-width: none; /* Remove max-width for smaller screens */
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .level {
+        font-size: 10px; /* Adjust font size for smaller screens */
+    }
+}
